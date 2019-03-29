@@ -2,9 +2,15 @@ package com.cache;
 
 public class LRUCache {
 
-    public String get(String key) {
-        return null;
+    public LRUCache(int capacity) {
+
     }
 
+    public int get(int key) {
 
+    }
+
+    public void put(int key, int value) {
+
+    }
 }
