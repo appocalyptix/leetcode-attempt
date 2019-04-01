@@ -1,4 +1,4 @@
-package com.twopointers;
+package com.algorithm.twopointers;
 
 /**
  * #80

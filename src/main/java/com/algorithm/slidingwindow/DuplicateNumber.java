@@ -1,4 +1,4 @@
-package com.slidingwindow;
+package com.algorithm.slidingwindow;
 
 public class DuplicateNumber {
     public int findDuplicate(int[] nums) {

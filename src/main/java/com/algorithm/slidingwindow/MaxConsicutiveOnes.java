@@ -1,4 +1,4 @@
-package com.slidingwindow;
+package com.algorithm.slidingwindow;
 
 public class MaxConsicutiveOnes {
     public int longestOnes(int[] a, int k) {

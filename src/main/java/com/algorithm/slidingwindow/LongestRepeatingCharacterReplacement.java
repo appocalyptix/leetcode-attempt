@@ -1,4 +1,4 @@
-package com.slidingwindow;
+package com.algorithm.slidingwindow;
 
 /**
  * #424
