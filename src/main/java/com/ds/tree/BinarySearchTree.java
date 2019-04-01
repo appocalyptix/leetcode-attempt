@@ -96,7 +96,7 @@ public class BinarySearchTree {
             return true;
         } else if (nodeToBeDeleted.right == null) {
 
-            if(isRoot) {
+            if (isRoot) {
                 root = nodeToBeDeleted.left;
             } else {
                 addNode(parentNode, nodeToBeDeleted.left, isLeftChild);
@@ -117,7 +117,7 @@ public class BinarySearchTree {
 
             smallestNode.left = nodeToBeDeleted.left;
             smallestNode.right = nodeToBeDeleted.right;
-            if(isRoot) {
+            if (isRoot) {
                 root = smallestNode;
             } else {
                 addNode(parentNode, smallestNode, isLeftChild);
