@@ -1,4 +1,4 @@
-package com.ds.queue;
+package com.algorithm.sort;
 
 import java.util.Arrays;
 import java.util.Comparator;
