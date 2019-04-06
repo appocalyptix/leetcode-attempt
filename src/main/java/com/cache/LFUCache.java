@@ -21,6 +21,8 @@ public class LFUCache {
     public int get(int key) {
         if (frequencyMap.containsKey(key)) {
             frequencyMap.put(key, frequencyMap.get(key) + 1);
+        } else {
+            frequencyMap.put(key, 1);
         }
         if (!dataMap.containsKey(key)) {
             return -1;
