@@ -100,6 +100,6 @@ public class CourseSchedule {
 
     public static void main(String[] args) {
         CourseSchedule cs = new CourseSchedule();
-        System.out.println(cs.canFinish(2, new int[][]{{1, 0}, {0, 1}}));
+        System.out.println(cs.canFinish(2, new int[][]{{0, 1}}));
     }
 }
