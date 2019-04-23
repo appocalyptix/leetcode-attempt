@@ -10,7 +10,7 @@ import java.util.List;
  * <p>
  * Note: The solution set must not contain duplicate subsets.
  */
-public class SubSet {
+public class SebSets {
     public List<List<Integer>> subsets(int[] nums) {
 
         if (nums.length == 0) {
@@ -43,7 +43,7 @@ public class SubSet {
     }
 
     public static void main(String[] args) {
-        SubSet set = new SubSet();
+        SebSets set = new SebSets();
         List<List<Integer>> ll = set.subsets(new int[]{1, 1, 1});
 
         for (List<Integer> l : ll) {
