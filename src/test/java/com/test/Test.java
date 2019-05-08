@@ -1,10 +1,7 @@
 package com.test;
 
 import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Iterator;
 import java.util.Map;
-import java.util.Set;
 
 public class Test {
     public static String minWindow(String s, String t) {
@@ -72,17 +69,6 @@ public class Test {
 
     public static void main(String[] args) {
 
-        Set<String> s = new HashSet<>();
-        s.add("e");
-        s.add("c");
-        s.add("b");
-        s.add("d");
-        s.add("a");
-        Iterator<String> itr = s.iterator();
-
-        while(itr.hasNext()) {
-            System.out.println(itr.next());
-        }
 
     }
 }
