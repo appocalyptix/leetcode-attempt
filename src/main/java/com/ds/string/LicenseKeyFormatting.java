@@ -48,9 +48,5 @@ public class LicenseKeyFormatting {
     public static void main(String[] args) {
         LicenseKeyFormatting lf = new LicenseKeyFormatting();
         System.out.println(lf.licenseKeyFormatting("---", 3));
-
-        // String s = "5F3Z-2e-9-w";
-        // s = s.toUpperCase();
-        // System.out.println(s);
     }
 }
