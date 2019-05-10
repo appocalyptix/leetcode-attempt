@@ -12,9 +12,10 @@ package com.algorithm.slidingwindow;
  * Explanation: [4,-1,2,1] has the largest sum = 6.
  */
 public class MaximumSubarray {
+
     public int maxSubArray(int[] nums) {
         int start = 0;
-        int end = 0;
+        // int end = 0;
         int sum = Integer.MIN_VALUE;
         int currentSum = 0;
         int maxSum = Integer.MIN_VALUE;
@@ -23,11 +24,19 @@ public class MaximumSubarray {
             currentSum += nums[i];
             if (currentSum >= sum) {
                 sum = currentSum;
-                continue;
+                // end = i;
             } else {
-                //if (nums)
+                currentSum = currentSum - (nums[start] + nums[i]);
+                start++;
+                i--;
             }
         }
-        return 0;
+        return sum;
+    }
+
+    public static void main(String[] args) {
+        MaximumSubarray ms = new MaximumSubarray();
+        int[] nums = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
+        System.out.println(ms.maxSubArray(nums));
     }
 }
