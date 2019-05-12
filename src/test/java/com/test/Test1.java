@@ -1,4 +1,6 @@
-package com.test;
+*/*+-9+6package com.test;
 
 public class Test1 {
 }
+
++-*
