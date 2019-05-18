@@ -16,11 +16,11 @@ import java.util.List;
  * Output: [1, 3, 4]
  * Explanation:
  * <p>
- * 1            <---
- * /   \
- * 2     3         <---
- * \     \
- * 5     4       <---
+ *      1            <---
+ *    /   \
+ *   2     3         <---
+ *   \     \
+ *     5     4       <---
  */
 public class BinaryTreeRightSideView {
     public List<Integer> rightSideView(TreeNode root) {
