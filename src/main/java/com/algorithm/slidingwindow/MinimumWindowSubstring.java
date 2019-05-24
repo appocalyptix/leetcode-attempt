@@ -5,7 +5,7 @@ package com.algorithm.slidingwindow;
  * Given a string S and a string T, find the minimum window in S which will contain all the characters in T in complexity O(n).
  */
 public class MinimumWindowSubstring {
-    public String minWindow(String s, String t) {
+    public String minWindow2(String s, String t) {
         if (s.length() == 0 || t.length() == 0 || t.length() > s.length()) {
             return "";
         }
@@ -43,8 +43,53 @@ public class MinimumWindowSubstring {
         return true;
     }
 
+
+    public String minWindow(String s, String t) {
+
+        if (s.length() == 0 || t.length() == 0 || s.length() < t.length()) {
+            return "";
+        }
+
+
+        char[] tArr = t.toCharArray();
+        char[] sArr = s.toCharArray();
+
+
+
+        String minWindow = s;
+        String window = null;
+        int start = 0;
+        int j = 0;
+        boolean isMatchStart = false;
+
+
+
+        for (int i = start; i < s.length() && start < s.length(); i++) {
+
+            if (s.charAt(i) == t.charAt(j)) {
+                if(!isMatchStart) {
+                    isMatchStart = true;
+                    start = i;
+                }
+                j++;
+                if (j == t.length()) {
+                    window = s.substring(start, i +1);
+                    if (window.length() < minWindow.length()) {
+                        minWindow = window;
+                    }
+                }
+            } else {
+
+            }
+
+        }
+        return minWindow;
+    }
+
     public static void main(String[] args) {
         MinimumWindowSubstring m = new MinimumWindowSubstring();
-        System.out.println(m.minWindow("a", "b"));
+        System.out.println(m.minWindow2("a", "b"));
     }
+
+
 }

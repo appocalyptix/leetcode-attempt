@@ -2,6 +2,7 @@ package com.algorithm.sort;
 
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.PriorityQueue;
 
 /**
  * #253. Meeting Rooms II
@@ -25,26 +26,17 @@ public class MeetingRooms {
             return intervals.length;
         }
         Arrays.sort(intervals, new IntervalComparator());
-        int[] meetingRooms = new int[intervals.length];
-        Arrays.fill(meetingRooms, -1);
+        PriorityQueue<Integer> q = new PriorityQueue<>();
+        int max = 0;
 
-
-        for (int i = 0; i < intervals.length; i++) {
-            for (int j = 0; j < meetingRooms.length; j++) {
-                if (intervals[i].start >= meetingRooms[j]) {
-                    meetingRooms[j] = intervals[i].end;
-                    break;
-                }
+        for (Interval interval : intervals) {
+            if (!q.isEmpty() && q.peek() <= interval.start) {
+                q.poll();
             }
+            q.add(interval.end);
+            max = Math.max(max, q.size());
         }
-        int count = 0;
-        for (int i : meetingRooms) {
-            if (i == -1) {
-                break;
-            }
-            count++;
-        }
-        return count;
+        return max;
     }
 
     private static class IntervalComparator implements Comparator<Interval> {

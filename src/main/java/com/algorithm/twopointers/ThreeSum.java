@@ -44,9 +44,10 @@ public class ThreeSum {
         return mainList;
     }
 
+
     public static void main(String[] args) {
         ThreeSum ts = new ThreeSum();
-        List<List<Integer>> ll = ts.threeSum(new int[]{1, 1, 1});
+        List<List<Integer>> ll = ts.threeSum(new int[]{-2, -1, 0, 1, 2, 3});
 
         for (List<Integer> l : ll) {
             for (Integer i : l) {
