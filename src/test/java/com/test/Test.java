@@ -72,7 +72,7 @@ public class Test {
     public static void main(String[] args) {
 
         List<Integer> l = new ArrayList<>();
-        l.add
+       // l.add
 
     }
 }
