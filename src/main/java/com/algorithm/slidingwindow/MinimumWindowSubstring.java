@@ -1,5 +1,10 @@
 package com.algorithm.slidingwindow;
 
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
 /**
  * #76
  * Given a string S and a string T, find the minimum window in S which will contain all the characters in T in complexity O(n).
@@ -87,8 +92,14 @@ public class MinimumWindowSubstring {
     }
 
     public static void main(String[] args) {
-        MinimumWindowSubstring m = new MinimumWindowSubstring();
-        System.out.println(m.minWindow2("a", "b"));
+       // MinimumWindowSubstring m = new MinimumWindowSubstring();
+       // System.out.println(m.minWindow2("abc", "cba"));
+        List<String> l1 = Arrays.asList("a", "b", "c");
+        List<String> l2 = Arrays.asList("a", "b", "d");
+        Set<List<String>> set = new HashSet<>();
+        set.add(l1);
+        set.add(l2);
+        System.out.println(set.size());
     }
 
 
