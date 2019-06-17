@@ -1,35 +1,30 @@
 package com.test;
 
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
+import java.util.HashSet;
 import java.util.Set;
-import java.util.TreeMap;
 
 public class Test {
-    public static void main(String[] args) {
 
-        HashMap<String, String> xx = new HashMap<>();
-       TreeMap<String, String> map = new TreeMap<>(new Comparator<String>() {
-           @Override
-           public int compare(String o1, String o2) {
-               return 0;
-           }
-       });
-        //HashMap<String, String> map = new HashMap<>();
-
-        map.put("b", "B");
-        map.put("e", "E");
-        map.put("c", "C");
-        map.put("a", "A");
-        map.put("1", "D");
-        map.put("9", "Z");
-
-        Set<Map.Entry<String, String>> set = map.entrySet();
-        Iterator<Map.Entry<String, String>> itr = set.iterator();
-        while(itr.hasNext()) {
-            System.out.println(itr.next().getKey());
+    public static boolean isPowerOfFour(int num) {
+        if (num <= 0) {
+            return false;
         }
+
+        while (num > 0) {
+            if (num > 1 && num % 2 != 0) {
+                return false;
+            } else if (num > 4 && num < 8) {
+                return false;
+            }
+            if (num == 1) {
+                return true;
+            }
+            num = num >> 2;
+        }
+        return false;
+    }
+    public static void main(String[] args) {
+        Set<Integer> set = new HashSet<>();
+        //set.add
     }
 }
